@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RGB Controller</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="input-slide.css">
+</head>
+
+<body>
+    <header class="title">
+        <h1>RGB Controller</h1>
+    </header>
+    <article>
+        <div class="result">
+            <div id="result-screen">
+                <div class="circle" id="render_red_black"></div>
+                <div class="circle" id="render_green_black"></div>
+                <div class="circle" id="render_blue_black"></div>
+
+                <div class="circle" id="render_red"></div>
+                <div class="circle" id="render_green"></div>
+                <div class="circle" id="render_blue"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="controls-inner">
+                <label for="red">R</label>
+                <input class="red-slider" id="red" name="red" type="range" min="0" max="255" value="0">
+                <input type="number" class="red" min="0" max="255" value="0">
+                <br>
+                <label for="green">G</label>
+                <input class="green-slider" id="green" name="green" type="range" min="0" max="255" value="0">
+                <input type="number" class="green" min="0" max="255" value="0">
+                <br>
+                <label for="blue">B</label>
+                <input class="blue-slider" id="blue" name="blue" type="range" min="0" max="255" value="0">
+                <input type="number" class="blue" min="0" max="255" value="0">
+                <br>
+                <p>Hex: #<span class="hexcode_red">00</span><span class="hexcode_green">00</span><span class="hexcode_blue">00</span></p>
+            </div>
+        </div>
+
+    </article>
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/rgb_controller-0.4.js"></script>
+</body>
+
+</html>
