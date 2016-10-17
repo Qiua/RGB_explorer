@@ -21,7 +21,7 @@ $(document).ready(function () {
     }
 
     //Slider Function
-    $('input[type=range]').on("change mousemove", function () {
+    $('input[type=range]').on("input", function () {
         var id = this.id;
         var val = this.value;
 
@@ -30,7 +30,7 @@ $(document).ready(function () {
     });
 
     //Text to slider
-    $('input[type=number]').on("change click keyup mousewheel", function () {
+    $('input[type=number]').on("input", function () {
         var id = $(this).attr('class');
         var val = this.value;
 
@@ -39,7 +39,7 @@ $(document).ready(function () {
     });
 
     //Mouse Wheel
-    $('input[type=range]').on('mousewheel', function (event) {
+    $('input[type=range]').on('input', function (event) {
         event.preventDefault();
         var e = event.originalEvent;
         var wheel = (e.wheelDelta) ? e.wheelDelta : -(e.detail || e.deltaY);
